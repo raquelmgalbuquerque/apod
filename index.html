@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOD</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="apod.js" defer></script>
+  </head>
+  <body>
+    <div class="apod-wrapper">
+      <h1>Astronomy Picture of the Day</h1>
+      <div class="apod-form">
+        <form class="" onsubmit="displayAnotherApod(event)">
+          <label for="selected-date">Pick another day:</label>
+          <input
+            type="date"
+            id="selected-date"
+            name="selected-date"
+            min="1995-06-16"
+            required
+          />
+          <button type="submit">Get picture!</button>
+        </form>
+      </div>
+      <div class="apod-container">
+        <!-- This is the backup plan when I do too many API requests -->
+        <!-- <h2 class="apod-title">Horsehead and Flame</h2>
+
+        <p class="apod-date">2022 December 29</p>
+
+        <p class="apod-explanation">
+          The Horsehead Nebula, famous celestial dark marking also known as
+          Barnard 33, is notched against a background glow of emission nebulae
+          in this sharp cosmic skyscape. About five light-years "tall" the
+          Horsehead lies some 1,500 light-years away in the constellation of
+          Orion. Within the region's fertile molecular cloud complex, the
+          expanse of obscuring dust has a recognizable shape only by chance from
+          our perspective in the Milky Way though. Orion's easternmost belt
+          star, bright Alnitak, is to the left of center. Energetic ultraviolet
+          light from Alnitak powers the glow of dusty NGC 2024, the Flame
+          Nebula, just below it. Completing a study in cosmic contrasts, bluish
+          reflection nebula NGC 2023 is below the Horsehead itself. This
+          well-framed telescopic field spans about 3 full moons on the sky.
+        </p>
+
+        <img
+          class="apod-image"
+          src="https://apod.nasa.gov/apod/image/2212/B33LRGB_fb.png"
+          alt="astronomy picture of the day"
+        />
+        <p class="apod-copyright">
+          <b>Image Credit & Copyright</b>: Jason Close
+        </p> -->
+      </div>
+
+      <div class="random-apod-container"></div>
+
+      <p class="credits">
+        This website makes use of
+        <a
+          class="credits-link"
+          href="https://github.com/nasa/apod-api"
+          target="_blank"
+          >NASA's API</a
+        >
+        only for academic purposes. <br />
+
+        For more info please check out the
+        <a
+          class="credits-link"
+          href="https://apod.nasa.gov/apod/astropix.html"
+          target="_blank"
+          >APOD</a
+        >
+        official webpage.
+      </p>
+    </div>
+  </body>
+</html>
